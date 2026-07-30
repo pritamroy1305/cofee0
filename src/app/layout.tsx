@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/providers/theme-provider";
-import { QueryProvider } from "@/components/providers/query-provider";
+import { ThemeProvider } from "@/components/providers/theme-providers";
+import { QueryProvider } from "@/components/providers/query-providers";
 import { ClerkProvider} from '@clerk/nextjs'
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -42,7 +42,7 @@ export default function RootLayout({
         >
           <QueryProvider>
           {children}
-          </QueryProvider>
+         </QueryProvider>
         </ThemeProvider>
         </ClerkProvider>
       </body>
